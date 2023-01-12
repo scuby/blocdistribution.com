@@ -1,0 +1,81 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Basic */
+
+	// MSIE: Required for IEMobile.
+		@-ms-viewport {
+			width: device-width;
+		}
+
+	// MSIE: Prevents scrollbar from overlapping content.
+		body {
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+		}
+
+	// Ensures page width is always >=320px.
+		@include breakpoint('<=xsmall') {
+			html, body {
+				min-width: 393px;
+				width: 100vw;
+			}
+		}
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	body {
+		background: _palette(bg);
+
+		// Stops initial animations until page loads.
+			&.is-preload {
+				*, *:before, *:after {
+					@include vendor('animation', 'none !important');
+					@include vendor('transition', 'none !important');
+				}
+			}
+		
+		#intro {
+			// background: center no-repeat url("../../../images/bloc-badge-cover.png");
+			// background-size: cover;
+			width: 100%;
+			// margin-left: auto;
+			// margin-right: auto;
+		}
+
+		#contact {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		#contact > .inner {
+			// justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			// margin: 0;
+			flex: 1;
+			// margin: 0 10% 1em;
+			white-space: nowrap;
+			max-width: 100%;
+			@include breakpoint('<=medium'){
+				margin: 0;
+				padding: 2em 5em;
+				width: 100%;
+			}
+			@include breakpoint('<=small'){
+				padding: 1em;
+			}
+		}
+
+	}

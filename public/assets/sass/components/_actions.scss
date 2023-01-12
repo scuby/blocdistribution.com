@@ -1,0 +1,127 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Actions */
+
+	ul.actions {
+		@include vendor('display', 'flex');
+		cursor: default;
+		list-style: none;
+		// margin-left: (_size(element-margin) * -0.5); // scuby
+		// margin-right: (_size(element-margin) * -0.5);
+		// padding-right: 2em;
+		align-items: center;
+		justify-content: flex-end;
+
+		.scrolly {
+			display: flex;
+		// 	flex: 1;
+			justify-content: center;
+			align-items: center;
+		}
+
+		li {
+			// padding: 0 0 0 (_size(element-margin) * 0.5);
+			padding: 0;
+			vertical-align: middle;
+
+			// scuby
+			// & :first-child {
+			// 	margin-right: 5em;
+			// }
+			//
+		}
+		
+		&.special {
+			@include vendor('justify-content', 'center');
+			width: 100%;
+			margin-left: (_size(element-margin) * -0.5); // scuby
+			// margin-left: 0; // scuby
+
+			li {
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+
+		&.stacked {
+			@include vendor('flex-direction', 'column');
+			margin-left: 0;
+
+			li {
+				padding: (_size(element-margin) * 0.65) 0 0 0;
+
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+		}
+
+		&.fit {
+			width: calc(100% + #{_size(element-margin) * 0.5});
+
+			li {
+				@include vendor('flex-grow', '1');
+				@include vendor('flex-shrink', '0');
+				width: 100%;
+
+				> * {
+					width: 100%;
+					margin: 0; // scuby
+				}
+			}
+
+			&.stacked {
+				width: 100%;
+				// box-shadow: 0 0 200px rgba(0,0,0,0.9) inset; // scuby
+			}
+		}
+
+		@include breakpoint('<=xsmall') {
+			&:not(.fixed) {
+				@include vendor('flex-direction', 'column');
+				margin-left: 0;
+				width: 100% !important;
+
+				li {
+					@include vendor('flex-grow', '1');
+					// @include vendor('flex-grow', '0'); // scuby
+					@include vendor('flex-shrink', '1');
+					padding: (_size(element-margin) * 0.5) 0 0 0;
+					text-align: center;
+					// width: 100%;
+					width: 90vw;
+
+					> * {
+						width: 100%;
+						// width: 90vw;
+					}
+
+					&:first-child {
+						padding-top: 0;
+					}
+
+					input[type="submit"],
+					input[type="reset"],
+					input[type="button"],
+					button,
+					.button {
+						width: 70vw;
+						margin: 0 auto 2em;
+						padding: 0;
+
+						&.icon {
+							&:before {
+								margin-left: -0.5rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}

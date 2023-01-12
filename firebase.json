@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "site": "bloc-distro",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/public/assets/sass/**",
+      "**/fontawesome-free-5.15.4-web/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

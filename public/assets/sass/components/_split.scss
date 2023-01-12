@@ -1,0 +1,132 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Split */
+
+	.split {
+		@include vendor('display', 'flex');
+		> * {
+			width: calc(50% - 2.5em);
+		}
+
+		> :nth-child(2n - 1) {
+			padding-right: 2.5em;
+			border-right: solid 1px _palette(border);
+		}
+
+		> :nth-child(2n) {
+			padding-left: 2.5em;
+		}
+
+		&.style1 {
+			display: flex;
+
+			> :nth-child(2n - 1) {
+				// width: calc(66.66666% - 2.5em);
+				width: 60%;
+			}
+
+			> :nth-child(2n) {
+				// width: calc(33.33333% - 2.5em);
+				width: 250px;
+			}
+		}
+
+		section > img.scuby-image {
+			margin-bottom: 4rem;
+			width: 200px;
+			height: 200px;
+		}
+
+		@include breakpoint('<=xlarge') {
+			> * {
+				width: calc(50% - 2em);
+			}
+
+			> :nth-child(2n - 1) {
+				padding-right: 2em;
+			}
+
+			> :nth-child(2n) {
+				padding-left: 2em;
+			}
+
+			&.style1 {
+				> :nth-child(2n - 1) {
+					// width: calc(66.66666% - 2em);
+					width: 100%;
+				}
+
+				> :nth-child(2n) {
+					// width: calc(33.33333% - 2em);
+					width: 250px;
+				}
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			// display: block;
+			// scuby
+			display: flex;
+			// flex: 1 1 auto;
+			flex-direction: column;
+			width: 100%;
+			padding: 0;
+			white-space: normal;
+
+			& .scuby-image {
+				display: none;
+				// transform: scale(0.7);
+				// display: block;
+				// width: 20%;
+			}
+			//
+
+			> * {
+				// border-top: solid 1px _palette(border);
+				// margin: 4em 0 0 0;
+				// padding: 4em 0 0 0;
+				width: 90%;
+				// height: 100% !important; // scuby
+				// justify-content: space-around;
+			}
+			&.style1 {
+				> :nth-child(2n - 1) {
+					// border: none;
+					padding: unset;
+					width: 100%;
+					margin: 0;
+				}
+
+				> :nth-child(2n) {
+					padding: unset;
+					width: 100%;
+					margin: 0;
+				}
+
+				> :first-child {
+					border-top: 0;
+					margin-top: 0;
+					padding-top: 0;
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			> :last-child {
+				width: 100%;
+				border: none;
+				border-top: solid 1px rgba(255, 255, 255, 0.123);
+				text-align: center;
+				&.a {
+					text-decoration: none;
+				}
+			}
+
+
+
+		}
+	}

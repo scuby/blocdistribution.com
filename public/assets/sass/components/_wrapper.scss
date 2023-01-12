@@ -1,0 +1,206 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Wrapper */
+
+	.wrapper {
+		position: relative;
+		width: calc(100% - 1px);
+
+		&#contact h2,
+		&#expertise h2 {
+			padding-top: 2em;
+		}
+
+		&#expertise {
+			padding: 0 4em;
+			@include breakpoint('<=large'){
+				padding: 0 2em;
+			}
+			@include breakpoint('<=medium') {
+				padding: 0 0;
+			}
+		}
+
+		> .inner {
+			@include padding(5em, 5em);
+			padding-top: 0;
+			height: 100%; // scuby
+			// max-width: 100%;
+			// width: _size(inner-width);
+
+			@include breakpoint('<=xlarge') {
+				@include padding(4em, 2em);
+				padding-top: 0;
+				height: 100%; // scuby
+			}
+
+			@include breakpoint('<=large') {
+				// width: 100vw;
+				@include padding(3em, 3em);
+				padding-top: 0;
+				height: 100%; // scuby
+			}
+
+			@include breakpoint('<=small') {
+				@include padding(2em, 1em);
+				padding-top: 0;
+				// width: 100vw;
+			}
+
+			&.intro {
+				padding: 0 10%;
+				@include breakpoint('<=small'){
+					padding: 10% 0;
+				}
+			}
+
+			&.contact {
+				padding: 4em 0;
+				// margin: 0 10%;
+				@include breakpoint('<=medium'){
+					// padding: 2em 5%;
+					padding: 1em 1px;
+					margin: 5% 0; 
+				}
+			}
+
+			&.menu {
+				padding: 2em auto;
+			}
+		}
+
+		&.alt {
+			background-color: _palette(bg-alt);
+		}
+
+		&.style1 {
+			background-color: _palette(accent1);
+		}
+
+		&.style1-alt {
+			background-color: _palette(accent1-alt);
+		}
+
+		&.style2 {
+			background-color: _palette(accent2);
+		}
+
+		&.style2-alt {
+			background-color: _palette(accent2-alt);
+		}
+
+		&.style3 {
+			background-color: _palette(accent3);
+		}
+
+		&.style3-alt {
+			background-color: _palette(accent3-alt);
+		}
+
+		&.style4 {
+			background-color: _palette(accent4);
+		}
+
+		&.style5 {
+			background-color: _palette(accent5);
+		}
+
+		&.style6 {
+			background-color: _palette(accent6);
+		}
+
+		&.fullscreen {
+			@include vendor('display', 'flex');
+			@include vendor('flex-direction', 'column');
+			@include vendor('justify-content', 'center');
+			// min-height: 100vh;
+			min-height: 30vh;
+			// position: sticky;
+			// top: -17rem;
+
+			body.is-ie & {
+				// height: 100vh;
+				height: 50vh;
+			}
+
+			@include breakpoint('<=large') {
+				min-height: calc(100vh - 2.5em);
+				// position: sticky;
+				// top: -17rem;
+				// min-height: calc(66.6vh - 2.5em);
+
+				body.is-ie & {
+					// height: calc(100vh - 2.5em);
+					height: calc(50vh - 2.5em);
+				}
+			}
+
+			@include breakpoint('<=small') {
+				padding: 2em 0;
+				min-height: 0;
+				// width: 100vw;
+
+				body.is-ie & {
+					height: auto;
+				}
+			}
+		}
+
+		&.fade-up {
+			> .inner {
+				@include vendor('transform', 'translateY(0)');
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease',
+					'transform #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+					@include vendor('transform', 'translateY(1em)');
+				}
+			}
+		}
+
+		&.fade-down {
+			> .inner {
+				@include vendor('transform', 'translateY(0)');
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease',
+					'transform #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+					@include vendor('transform', 'translateY(-1em)');
+				}
+			}
+		}
+
+		&.fade {
+			> .inner {
+				@include vendor('transition', (
+					'opacity #{_duration(activation)} ease'
+				));
+				opacity: 1.0;
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .inner {
+					opacity: 0;
+				}
+			}
+		}
+	}

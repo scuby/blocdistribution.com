@@ -1,0 +1,96 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Intro */
+
+	#intro {
+		min-height: 100vh;
+		// max-height: 500px;
+		width: 100%;
+
+		.img-bg {
+			// width: 250px;
+			height: 250px;
+			margin: 1rem auto 1rem;
+			padding: 2rem;
+			display: flex;
+			box-sizing: border-box;
+			position: relative;
+			// top: 2em;
+			@include breakpoint('<=medium'){
+				// width: 200px;
+				// height: 200px;
+			}
+			@include breakpoint('<=small'){
+				// display: none;
+				// position: absolute;
+				// top: -10em;
+				margin: 0 auto 2rem;
+				// padding: 0.5em;
+				// width: 250px;
+				// height: 250px;
+				opacity: 0.9;
+			}
+		}
+
+		.actions {
+			display: flex;
+			justify-content: center;
+			box-sizing: border-box;
+			padding: 0;
+			// margin: 0;
+
+			.scrolly {
+				border: 1px solid white;
+				background-color: #30366b9a;
+				box-shadow: none;
+				margin-bottom: 8em;
+			}
+		}
+
+		p {
+			display: flex;
+			font-size: 1.7em;
+			color: white;
+			padding: 0 10% 4%;
+			margin: 1em auto;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+
+			@include breakpoint('<=medium') {
+				font-size: 1.4em;
+				padding: 1em 1em;
+				br {
+					display: none;
+				}
+			}
+
+			@include breakpoint('<=small') {
+				font-size: 1.2em;
+				padding: 0.5em 0;
+			}
+		}
+
+		@include breakpoint('<=large') {
+			background-attachment: scroll;
+			.scrolly {
+				// width: calc(90vw / 2);
+			}
+		}
+
+		@include breakpoint('<=small'){
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 0 1em;
+
+		}
+	}
+
+	#intro::before {
+		opacity: 0.05;
+	}

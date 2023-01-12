@@ -1,0 +1,92 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000,
+		max-features:		20,
+		max-sidebar-links:	20
+	);
+
+// Duration.
+	$duration: (
+		transition:			0.2s,
+		activation:			0.8s
+	);
+
+// Size.
+	$size: (
+		border-radius:		0.25em,
+		border-width:		1px,
+		// element-height:		2.75em,
+		element-height:		1.75em,
+		// element-margin:		2em,
+		element-margin:		1.5em,
+		// sidebar-width:		18em,
+		sidebar-width:		20em,
+		// sidebar-height:		3.5em,	// when <=large is active
+		sidebar-height:		2.5em,	// when <=large is active
+		inner-width:		80em
+	);
+
+// Font.
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+	$font: (
+		// family:				(Arial, Helvetica, sans-serif),
+		family: 			('Roboto', sans-serif),
+		family-fixed:		('Courier New', monospace),
+		// weight:				normal,
+		weight:				200,
+		// weight-bold:		bold,
+		weight-bold:		800,
+		kerning-alt:		0.1em
+	);
+
+// Palette.
+	$palette: (
+		// bg:					#312450,
+		// bg:					#242943,
+		// bg-alt:				darken(#312450, 5),
+		bg: 				#141727,
+		bg-alt: 			darken(#141727, 20),
+		fg:					rgba(255, 255, 255, 0.896),
+		fg-bold:			#ffffff,
+		fg-light:			rgba(255, 255, 255, 0.704),
+		border:				rgba(255,255,255,0.0),
+		border-bg:			rgba(255,255,255,0.05),
+		// accent1: 			#141727,
+		// accent1-alt:		darken(#5e42a6, 10),
+		// accent1-alt:		darken(#141727, 10),
+		// accent1:			#242943,
+		// accent1-alt:		darken(#242943, 5),
+		// accent2:			#1d223d,
+		// accent2-alt:		darken(#1d223d, 10),
+		// accent3:			#202c45,
+
+		// bg:					#242943,
+		// bg-alt:				#2a2f4a,
+		// fg:					#ffffff,
+		// fg-bold:			#ffffff,
+		// fg-light:			rgba(244,244,255,0.2),
+		// border:				rgba(212,212,255,0.1),
+		// border-bg:			rgba(212,212,255,0.035),
+		// highlight:			#9bf1ff,
+		// accent1: 			darken(#141727, 5),
+		accent1: 			lighten(#141727, 5),
+		accent1-alt:		lighten(#141727, 10),
+		accent2: 			lighten(#141727, 15),
+		accent2-alt:		lighten(#141727, 20),
+		accent3: 			lighten(#141727, 25),
+		accent3-alt:		darken(#202c45, 35),
+		// accent9:            darken(#67aac0, 20),
+		// accent5:            darken(#8c85b0, 20),
+		// accent7:            darken(#e48e83, 5),
+		// accent7:            darken(#e48e83e8, 20),
+		// accent8:            darken(#e7b788, 20),
+		accent6:            darken(#8eace8, 5),
+		// accent4:            darken(#75b392, 5),
+		// accent4:            darken(#75b392, 20),
+
+		accent4:            darken(#75b392db, 4),
+		accent5:            darken(#8c85b0d9, 4),
+		accent7:            darken(#e48e83e2, 4),
+		accent8:            darken(#e4af7bdf, 4),
+		accent9:            darken(#67aac0db, 4),
+	);

@@ -1,0 +1,57 @@
+///
+/// Hyperspace by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Contact */
+
+	ul.contact {
+		list-style: none;
+		padding: 0;
+		margin-top: -2em;
+
+		> li {
+			padding: 0;
+			margin: 1.5em 0 0 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			& .scuby-image {
+				margin-bottom: 3em;
+			}
+		}
+
+		// margin-left: 10vw;
+
+		// scuby {
+		@include breakpoint('<=medium') {
+			display: flex;
+			// flex-direction: column;
+			// flex: 1 0 100%;
+			justify-content: center;
+			gap: 4rem;
+			// margin: 0 0 0 -3em;
+			padding: 1em;
+
+			&.raised {
+				width: 100%;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				// border-top: 1px solid gray;
+			}
+
+		}
+
+		@include breakpoint('<=small') {
+			// display: grid;
+			display: block;
+			gap: 0;
+			margin: 0;
+			padding: 0;
+			// margin: 0 auto 2em;
+		}
+		// }
+	}
